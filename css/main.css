@@ -1,0 +1,195 @@
+/* Base styles (Reset and Font styling) */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    padding: 8.125rem 1.25rem 0;
+    font-family: "Kumbh Sans", sans-serif;
+    background-image: linear-gradient(
+        to bottom,
+        hsl(273, 75%, 66%),
+        hsl(240, 73%, 65%)
+    );
+    background-repeat: no-repeat;
+}
+
+.faqCardText .faqCardTitle {
+    font-size: 1.828rem;
+    color: hsl(238, 29%, 16%);
+}
+
+.cardAccHeader .accHeaderText {
+    display: inline-block;
+    font-size: 0.835rem;
+    color: hsl(237, 12%, 33%);
+}
+
+.cardAccHeader .accHeaderText:active {
+    color: hsl(14, 88%, 65%);
+}
+
+.faqCardAcc .cardAccContent {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: hsl(240, 6%, 50%);
+}
+
+/* FAQ card styling */
+.faqCard {
+    display: grid;
+    grid-template-columns: 1fr 1.35fr;
+    max-width: 57.8125rem;
+    margin: 0 auto 0 auto;
+    overflow: visible;
+    border-radius: 1.156rem;
+    background-color: hsl(0, 100%, 100%);
+    box-shadow: 5px 8px 30px -10px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 5px 8px 30px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 5px 8px 30px -10px rgba(0, 0, 0, 0.75);
+}
+
+.faqCard .faqCardBg {
+    position: relative;
+    background-image: url("../images/illustration-woman-online-desktop.svg"),
+        url("../images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: -5.3125rem center, -36.5625rem -18.4375rem;
+}
+
+.faqCard .faqCardBg::before {
+    content: "";
+    display: block;
+    width: 6.375rem;
+    height: 6.875rem;
+    position: absolute;
+    top: 40%;
+    left: -3.0625rem;
+    border-radius: 2.625rem;
+    background-image: url("../images/illustration-box-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: -2.75rem 0;
+}
+
+.faqCard .faqCardText {
+    padding: 3.75rem 5.3125rem 5.625rem 5rem;
+}
+
+.faqCardText .faqCardTitle {
+    margin-bottom: 1.65rem;
+}
+
+.faqCardText .faqCardAcc {
+    position: relative;
+    padding: 0.9375rem 0.7032rem 0.9375rem 0.1rem;
+}
+
+.faqCardText .faqCardAcc::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.0625rem;
+    position: absolute;
+    bottom: 0;
+    background-color: hsl(240, 5%, 91%);
+}
+
+.faqCardAcc .cardAccHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.faqCardAcc .cardAccContent {
+    line-height: 1.2rem;
+}
+
+/* Styles modified by JS */
+.faqCardAcc.active .accHeaderText {
+    font-weight: 700;
+}
+
+.cardAccHeader .accHeaderBtn {
+    transition: transform 0.3s ease-out;
+}
+
+.faqCardAcc.active .accHeaderBtn {
+    transform: rotate(180deg);
+}
+
+.faqCardAcc .cardAccContent {
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: 0.3s max-height ease-out, 0.3s padding linear;
+}
+
+.faqCardAcc.active .cardAccContent {
+    max-height: 75px;
+    padding: 0.5625rem 0 0.28125rem 0;
+}
+
+/* media queries (Responsive) */
+@media (max-width: 1030px) {
+    /* base styles */
+    body {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* FAQ card */
+    .faqCard {
+        grid-template-columns: 1fr;
+        position: relative;
+        width: 87.5%;
+    }
+
+    .faqCard .faqCardBg {
+        width: 15.625rem;
+        height: 13.1875rem;
+        position: absolute;
+        top: -6.9375rem;
+        left: 50%;
+        z-index: 2;
+        transform: translateX(-50%);
+        border-radius: 4.6875rem;
+        background-image: url("../images/illustration-woman-online-mobile.svg"),
+            url("../images/bg-pattern-mobile.svg");
+        background-position: -1.25rem 0, 0.625rem 6.5625rem;
+    }
+
+    .faqCard .faqCardBg::before {
+        display: none;
+    }
+
+    .faqCard .faqCardText {
+        padding: 7.5rem 1.5rem 3.125rem;
+    }
+
+    .faqCardText .faqCardTitle {
+        margin-bottom: 0.9375rem;
+        text-align: center;
+    }
+
+    .cardAccHeader .accHeaderText {
+        font-size: 0.8rem;
+    }
+
+    .faqCardAcc .cardAccContent {
+        width: 90%;
+        max-width: 29.6875rem;
+        padding-right: 0.625rem;
+    }
+}
+
+.attribution {
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    text-align: center;
+}
