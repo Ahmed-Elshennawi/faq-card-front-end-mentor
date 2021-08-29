@@ -6,7 +6,6 @@ This a solution to the front end mentor challange FAQ accordion card [Challange]
 
 -   [The challenge](#the-challenge)
     -   [Screenshot](#screenshot)
-    -   [Links](#links)
 -   [My process](#my-process)
     -   [Built with](#built-with)
 
