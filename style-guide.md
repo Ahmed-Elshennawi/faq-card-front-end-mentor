@@ -25,6 +25,7 @@ Background gradient:
 
 ### Neutral
 
+
 #### Text
 
 - Very dark grayish blue: hsl(237, 12%, 33%)
