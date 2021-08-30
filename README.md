@@ -2,7 +2,7 @@
 
 This a solution to the front end mentor challange FAQ accordion card [Challange](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam)
 
-## Table of contents
+## Table of contents :
 
 -   [The challenge](#the-challenge)
     -   [Screenshot](#screenshot)
