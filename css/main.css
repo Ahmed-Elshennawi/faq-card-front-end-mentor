@@ -131,7 +131,7 @@ body {
 }
 
 .faqCardAcc.active .cardAccContent {
-    max-height: 100px;
+    max-height: 6.25rem;
     padding: 0.5625rem 0 0.28125rem 0;
 }
 
